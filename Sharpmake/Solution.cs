@@ -29,7 +29,7 @@ namespace Sharpmake
             set { SetProperty(ref _name, value); }
         }
 
-        private bool _isFileNameToLower = true;
+        private bool _isFileNameToLower = false;
         public bool IsFileNameToLower
         {
             get { return _isFileNameToLower; }

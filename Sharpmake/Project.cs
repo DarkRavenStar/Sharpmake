@@ -32,7 +32,7 @@ namespace Sharpmake
             set { SetProperty(ref _name, value); }
         }
 
-        private bool _isFileNameToLower = true;                                         // Makes the ProjectName ToLower or not
+        private bool _isFileNameToLower = false;                                         // Makes the ProjectName ToLower or not
         public bool IsFileNameToLower
         {
             get { return _isFileNameToLower; }
@@ -44,7 +44,7 @@ namespace Sharpmake
             get { return _name.ToLower(); }
         }
 
-        private bool _isTargetFileNameToLower = true;                                         // Makes the ProjectName ToLower or not
+        private bool _isTargetFileNameToLower = false;                                         // Makes the ProjectName ToLower or not
         public bool IsTargetFileNameToLower
         {
             get { return _isTargetFileNameToLower; }
@@ -512,6 +512,7 @@ namespace Sharpmake
                 {
                     if (file.EndsWith(matchExtension, StringComparison.OrdinalIgnoreCase))
                     {
+                        //Console.Write("\n AddMatchExtensionFiles - Added Files: " + file);
                         files.Add(file);
                         break;
                     }

@@ -46,6 +46,8 @@ namespace Sharpmake
 
         public static string PathMakeStandard(string path, bool forceToLower)
         {
+            //TEENA
+            forceToLower = false;
             // cleanup the path by replacing the other separator by the correct one for this OS
             // then trim every trailing separators
             var standardPath = path.Replace(OtherSeparator, Path.DirectorySeparatorChar).TrimEnd(Path.DirectorySeparatorChar);
